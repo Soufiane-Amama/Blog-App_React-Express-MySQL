@@ -1,10 +1,13 @@
 import mysql from "mysql"
+import dotenv from "dotenv";
 
-export const db = mysql.createConnection({
-  host:"bkr5fsyiuwydjjw3lfvu-mysql.services.clever-cloud.com",
-  user:"u306ulcayt9kezvl",
-  password:"LkX1HgkS54clQeNg8q99",
-  database:"bkr5fsyiuwydjjw3lfvu"
+dotenv.config();
+
+export const db = mysql.createConnection({ 
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_NAME
 })
 
 db.connect((err, resul)=>{
