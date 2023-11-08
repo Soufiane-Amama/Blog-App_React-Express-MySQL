@@ -4,12 +4,21 @@ import userRoutes from "./routes/users.js";
 import postRoutes from "./routes/posts.js";
 import cookieParser from "cookie-parser";
 import multer from "multer";
+import cors from "cors";
 
 const app = express();
-const PORT = 8800;
+const PORT = process.env.PORT || 8800;
 
 app.use(express.json());
 app.use(cookieParser());
+app.use(cors());
+
+// app.use(cors({
+//   origin: 'https://trading-max-app.vercel.app',
+//   credentials: true
+// }));
+
+
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
     cb(null, "../client/public/upload");
