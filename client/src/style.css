@@ -144,16 +144,17 @@
   .app .container .home .posts .post .content p {
     font-size: 18px;
   }
-  .app .container .home .posts .post .content button {
+  .app .container .home .posts .post .content .button {
     width: max-content;
     padding: 10px 20px;
     border: none;
     cursor: pointer;
     background-color: white;
+    text-decoration: none;
     border: 1px solid teal;
     color: teal;
   }
-  .app .container .home .posts .post .content button:hover {
+  .app .container .home .posts .post .content .button:hover {
     border: 1px solid white;
     background-color: #b9e7e7;
     color: black;
@@ -228,16 +229,17 @@
   .app .container .single .menu .post h2 {
     color: #555;
   }
-  .app .container .single .menu .post button {
+  .app .container .single .menu .post .button {
     width: max-content;
     padding: 7.5px 15px;
     border: none;
     cursor: pointer;
+    text-decoration: none;
     color: teal;
     background-color: white;
     border: 1px solid teal;
   }
-  .app .container .single .menu .post button:hover {
+  .app .container .single .menu .post .button:hover {
     border: 1px solid white;
     background-color: #b9e7e7;
     color: black;

@@ -1,8 +1,11 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import { AuthContext } from "../context/authContext";
 
 const Menu = ({cat}) => {
   const [posts, setPosts] = useState([]);
+  const { currentUser } = useContext(AuthContext);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -48,7 +51,7 @@ const Menu = ({cat}) => {
         <div className="post" key={post.id}>
           <img src={`../upload/${post?.img}`} alt="" />
           <h2>{post.title}</h2>
-          <button>Read More</button>
+          {currentUser ? <Link className="button" to={`/post/${post.id}`}>Read More</Link> : <Link className="button" to={`/login`}>Read More</Link>}
         </div>
       ))}
     </div>
