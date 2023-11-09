@@ -1,7 +1,6 @@
 import {
   createBrowserRouter,
   RouterProvider,
-  
   Outlet,
 } from "react-router-dom";
 import Register from "./pages/Register";
