@@ -42,7 +42,7 @@ const Home = () => {
               <Link className="link" to={`/post/${post.id}`}>
                 <h1>{post.title}</h1>
               </Link>
-              <p>{getText(post.description)}</p>
+              <p>{getText(post.description)}</p> 
               {currentUser ? <Link className="button" to={`/post/${post.id}`}>Read More</Link> : <Link className="button" to={`/login`}>Read More</Link>} 
             </div>
           </div>
